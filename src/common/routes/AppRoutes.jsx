@@ -7,8 +7,8 @@ import routes from "../../shared/constants/routes";
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path={routes.HOME} element={Home} />
-      <Route path={routes.LOGIN} element={Login} />
+      <Route path={routes.HOME} element={<Home />} />
+      <Route path={routes.LOGIN} element={<Login />} />
     </Routes>
   );
 }
