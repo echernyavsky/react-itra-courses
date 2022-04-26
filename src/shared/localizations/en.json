@@ -1,0 +1,16 @@
+{
+  "nav.home": "Home",
+  "nav.login": "Login",
+  "nav.travel-points": "Travel points",
+  "nav.language-picker": "Language",
+  "travel-points.header": "Travel Points",
+  "travel-points.button.create-new": "Create new travel point",
+  "travel-points.form.name": "Name",
+  "travel-points.form.latitude": "Latitude",
+  "travel-points.form.longitude": "Longitude",
+  "travel-points.form.status": "Status",
+  "travel-points.form.visited-at": "Visited at",
+  "travel-points.form.created-at": "Created at",
+  "travel-points.form.submit": "Submit",
+  "travel-points.form.reset": "Reset"
+}

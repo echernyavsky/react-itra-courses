@@ -1,0 +1,16 @@
+{
+  "nav.home": "Домашняя страница",
+  "nav.login": "Вход",
+  "nav.travel-points": "Достопримечательности",
+  "nav.language-picker": "Язык",
+  "travel-points.header": "Достопримечательности",
+  "travel-points.button.create-new": "Добавить достопримечательность",
+  "travel-points.form.name": "Название",
+  "travel-points.form.latitude": "Широта",
+  "travel-points.form.longitude": "Долгота",
+  "travel-points.form.status": "Статус",
+  "travel-points.form.visited-at": "Дата посещения",
+  "travel-points.form.created-at": "Дата создания",
+  "travel-points.form.submit": "Отправить",
+  "travel-points.form.reset": "Сбросить"
+}

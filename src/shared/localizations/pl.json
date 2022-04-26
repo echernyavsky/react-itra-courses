@@ -1,0 +1,13 @@
+{
+  "nav.home": "Strona główna",
+  "nav.login": "Login",
+  "nav.travel-points": "Atrakcje turystyczne",
+  "nav.language-picker": "Język",
+  "travel-points.form.name": "Nazwa",
+  "travel-points.form.latitude": "Szerokość geograficzna",
+  "travel-points.form.longitude": "Długość geograficzna",
+  "travel-points.form.status": "Status",
+  "travel-points.form.visited-at": "Data wizyty",
+  "travel-points.form.submit": "Wyślij",
+  "travel-points.form.reset": "Usuń"
+}
