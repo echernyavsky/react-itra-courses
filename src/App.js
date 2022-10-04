@@ -15,13 +15,13 @@ export default function App() {
     <BrowserRouter>
       <Container>
         <Grid container>
-          <Grid item xs={12}>
+          <Grid item xs={12} style={{ border: 2, borderColor: "red", borderStyle: "solid"}}>
             <Header />
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={4} md={3} lg={2} style={{ border: 2, borderColor: "green", borderStyle: "solid"}}>
             <Sidebar />
           </Grid>
-          <Grid item xs={12} md={9}>
+          <Grid item xs={12} sm={8} md={9} lg={10} style={{ border: 2, borderColor: "yellow", borderStyle: "solid"}}>
             <Content>
               <AppRoutes />
             </Content>
