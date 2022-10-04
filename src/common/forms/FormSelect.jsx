@@ -2,18 +2,14 @@ import React from "react";
 import { Controller } from "react-hook-form";
 import Select from "react-select";
 
-export default function FormSelect({ control }) {
+export default function FormSelect({ control, name, options }) {
     return (
         <Controller
-            name="iceCreamType"
+            name={name}
             render={({ field }) => (
                 <Select
                     {...field}
-                    options={[
-                        { value: "chocolate", label: "Chocolate" },
-                        { value: "strawberry", label: "Strawberry" },
-                        { value: "vanilla", label: "Vanilla" }
-                    ]}
+                    options={options}
                 />
             )}
             control={control}
