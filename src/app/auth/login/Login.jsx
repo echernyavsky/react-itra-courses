@@ -1,5 +1,6 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 export default function Login() {
-  return <span>Login</span>;
+  return <Typography variant="h2">Login</Typography>;
 }
