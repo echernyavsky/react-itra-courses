@@ -5,6 +5,7 @@ import GlobalContext from "../../shared/contexts/GlobalContext";
 import { Checkbox, FormControlLabel } from "@mui/material";
 import routes from "../../shared/constants/routes";
 import { Link } from "react-router-dom";
+import LanguagePicker from "./LanguagePicker";
 
 export default function Header() {
     const { showBorders, setShowBorders } = useContext(GlobalContext);
@@ -30,7 +31,7 @@ export default function Header() {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box textAlign="right">
-
+                <LanguagePicker />
             </Box>
           </Grid>
         </Grid>
