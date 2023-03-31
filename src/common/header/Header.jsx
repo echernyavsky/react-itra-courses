@@ -12,9 +12,9 @@ export default function Header() {
     return (
       <Box p={4}>
         <Grid container justifyContent="space-between" alignItems="center">
-          <Grid item xs={12} md={2}>
+          <Grid item xs={12} md={1}>
               <Link to={routes.HOME}>
-                  <img src="/react-logo.png" style={{ maxWidth: 100 }} />
+                  <img src="/vite.svg" style={{ maxWidth: 100 }} />
               </Link>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -28,7 +28,7 @@ export default function Header() {
                     }
                 />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={7}>
             <Box textAlign="right">
 
             </Box>

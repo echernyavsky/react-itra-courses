@@ -1,19 +1,24 @@
 import React from "react";
 import { Controller } from "react-hook-form";
-import Select from "react-select";
+import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
-export default function FormSelect({ control, name, options }) {
+export default function FormSelect({ control, name, label, options , ...props}) {
+    const labelId = `${name}-label`;
     return (
-        <Controller
-            name={name}
-            render={({ field }) => (
-                <Select
-                    {...field}
-                    options={options}
-                />
-            )}
-            control={control}
-            defaultValue=""
-        />
+        <FormControl {...props}>
+            <InputLabel id={labelId}>{label}</InputLabel>
+            <Controller
+                render={({ field }) => (
+                    <Select {...field} labelId={labelId} label={label}>
+                        <MenuItem>test</MenuItem>
+                        {options.map(({ value, label }) => (
+                            <MenuItem key={value} value={value}>{label}</MenuItem>
+                        ))}
+                    </Select>
+                )}
+                name={name}
+                control={control}
+            />
+        </FormControl>
     );
 }
