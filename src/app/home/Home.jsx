@@ -10,7 +10,7 @@ export default function Home() {
           <Typography variant="h2">Home page</Typography>
         </Box>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4} xl={3}>
             <Box>
               <Typography variant="h4">What is Lorem Ipsum?</Typography>
             </Box>
@@ -20,7 +20,7 @@ export default function Home() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4} xl={3}>
             <Box>
               <Typography variant="h4">Why do we use it?</Typography>
             </Box>
@@ -30,7 +30,7 @@ export default function Home() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4} xl={3}>
             <Box>
               <Typography variant="h4">Where does it come from?</Typography>
             </Box>
@@ -40,7 +40,7 @@ export default function Home() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} lg={4} xl={3}>
             <Box>
               <Typography variant="h4">Where can I get some?</Typography>
             </Box>
