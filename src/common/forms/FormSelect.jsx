@@ -10,7 +10,6 @@ export default function FormSelect({ control, name, label, options , ...props}) 
             <Controller
                 render={({ field }) => (
                     <Select {...field} labelId={labelId} label={label}>
-                        <MenuItem>test</MenuItem>
                         {options.map(({ value, label }) => (
                             <MenuItem key={value} value={value}>{label}</MenuItem>
                         ))}
