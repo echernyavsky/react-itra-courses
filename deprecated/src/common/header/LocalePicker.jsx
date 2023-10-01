@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
-import locales from "../../shared/constants/locales";
-import GlobalContext from "../../shared/contexts/GlobalContext";
+import locales from "../../shared/constants/locales.js";
+import GlobalContext from "../../shared/contexts/GlobalContext.js";
 
 export default function LocalePicker() {
     const {

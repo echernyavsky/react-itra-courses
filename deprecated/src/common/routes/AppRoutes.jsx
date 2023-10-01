@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from "../../app/auth/login/Login";
-import Home from "../../app/home/Home";
-import routes from "../../shared/constants/routes";
+import Login from "../../app/auth/login/Login.jsx";
+import Home from "../../app/home/Home.jsx";
+import routes from "../../shared/constants/routes.js";
 
 export default function AppRoutes() {
   return (

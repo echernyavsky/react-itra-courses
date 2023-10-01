@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import GlobalContext from "../../shared/contexts/GlobalContext";
+import GlobalContext from "../../shared/contexts/GlobalContext.js";
 import { Checkbox, FormControlLabel } from "@mui/material";
-import routes from "../../shared/constants/routes";
+import routes from "../../shared/constants/routes.js";
 import { Link } from "react-router-dom";
 
 export default function Header() {
