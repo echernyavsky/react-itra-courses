@@ -6,8 +6,20 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
+import routes from "../shared/constants/routes.ts";
+import { useCallback } from "react";
+import { useNavigate } from "react-router";
 
 export default function NavigationPanel() {
+  const navigate = useNavigate();
+
+  const onLinkClick = useCallback(
+    (path: string) => {
+      navigate(path);
+    },
+    [navigate],
+  );
+
   return (
     <Navbar shouldHideOnScroll isBordered maxWidth="full">
       <NavbarBrand>
@@ -19,7 +31,7 @@ export default function NavigationPanel() {
       ></NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link onClick={() => onLinkClick(routes.LOGIN)}>Login</Link>
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">

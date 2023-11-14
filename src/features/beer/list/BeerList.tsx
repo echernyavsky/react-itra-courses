@@ -15,7 +15,7 @@ export default function BeerList() {
   return (
     <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
       {beers.map((item, index) => (
-        <BeerListItem item={item} index={index} />
+        <BeerListItem key={item.id} item={item} index={index} />
       ))}
     </div>
   );

@@ -4,6 +4,7 @@ const urls = {
   BEERS: `${BASE_URL}/beers`,
   BEERS_COUNT: `${BASE_URL}/beers/count/view`,
   BREWERIES: `${BASE_URL}/brewers`,
+  UPLOAD: `${BASE_URL}/upload`,
 };
 
 export default urls;
