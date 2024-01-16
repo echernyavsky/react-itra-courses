@@ -9,7 +9,7 @@ export default function ApplicationLayout({
   children,
 }: ApplicationLayoutProps) {
   return (
-    <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
       <div className="md:col-span-3 lg:col-span-4">
         <NavigationPanel />
       </div>

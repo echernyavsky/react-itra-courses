@@ -8,7 +8,7 @@ export default function Home() {
           <FormattedMessage id="app.home-page.header" />
         </h1>
       </div>
-      <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-4">
         <div>
           <div>
             <h1>

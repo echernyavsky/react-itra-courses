@@ -23,7 +23,7 @@ export default function Sidebar() {
     <Listbox
       aria-label="User Menu"
       onAction={(key) => navigate(key as string)}
-      className="divide-default-300/50 dark:divide-default-100/80 bg-content1 shadow-small rounded-medium gap-0 divide-y overflow-visible p-0"
+      className="gap-0 divide-y divide-default-300/50 overflow-visible rounded-medium bg-content1 p-0 shadow-small dark:divide-default-100/80"
       itemClasses={{
         base: "px-3 first:rounded-t-medium last:rounded-b-medium rounded-none gap-3 h-12 data-[hover=true]:bg-default-100/80",
       }}
