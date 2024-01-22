@@ -1,28 +1,33 @@
 import "./App.css";
-import ApplicationLayout from "./components/ApplicationLayout.tsx";
-import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./components/AppRoutes.tsx";
 import { IntlProvider } from "react-intl";
+import locales, {
+  localizationDictionaries,
+} from "./shared/localization/locales.ts";
 
 function App() {
-  const isDark = false;
+  // const [currentLocale, setCurrentLocale] = useState<string>(
+  //   localStorage.getItem(localStorageKeys.LOCALE) || locales.EN,
+  // );
 
   return (
-    <IntlProvider locale="en">
-      <main
-        className={`min-h-screen bg-background text-foreground ${
-          isDark ? "dark" : ""
-        }`}
+    <>
+      {/*
+     <GlobalContext.Provider
+       value={{
+         locale: currentLocale,
+         setLocale: setCurrentLocale,
+       }}
+     >
+    */}
+      <IntlProvider
+        messages={localizationDictionaries[locales.EN]}
+        locale={locales.EN}
       >
-        <div className="container mx-auto">
-          <BrowserRouter>
-            <ApplicationLayout>
-              <AppRoutes />
-            </ApplicationLayout>
-          </BrowserRouter>
-        </div>
-      </main>
-    </IntlProvider>
+        <AppRoutes />
+      </IntlProvider>
+      {/* </GlobalContext.Provider> */}
+    </>
   );
 }
 

@@ -42,7 +42,7 @@ export default function LocalePicker() {
       label="Select locale"
       className="max-w-xs"
       onSelectionChange={onSelectionChange}
-      value={locale}
+      defaultSelectedKeys={[locale]}
     >
       {localeOptions.map((it) => (
         <SelectItem key={it.id} value={it.id}>

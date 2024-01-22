@@ -9,6 +9,7 @@ import {
 import routes from "../shared/constants/routes.ts";
 import { useCallback } from "react";
 import { useNavigate } from "react-router";
+import { Image } from "@nextui-org/react";
 
 export default function NavigationPanel() {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function NavigationPanel() {
   return (
     <Navbar shouldHideOnScroll isBordered maxWidth="full">
       <NavbarBrand>
-        <p className="font-bold text-inherit">Course Project</p>
+        <Image src="/logo_react.png" style={{ height: "80px" }} />
       </NavbarBrand>
       <NavbarContent
         className="hidden gap-4 sm:flex"
@@ -33,6 +34,9 @@ export default function NavigationPanel() {
         <NavbarItem className="hidden lg:flex">
           <Link onClick={() => onLinkClick(routes.LOGIN)}>Login</Link>
         </NavbarItem>
+        {/*<NavbarItem className="w-96">*/}
+        {/*  <LocalePicker />*/}
+        {/*</NavbarItem>*/}
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
             Sign Up
