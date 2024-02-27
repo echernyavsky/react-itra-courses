@@ -3,16 +3,20 @@ import Sidebar from "./Sidebar.tsx";
 import Footer from "./Footer.tsx";
 import { Outlet, useNavigate } from "react-router";
 import { NextUIProvider } from "@nextui-org/react";
+import { useContext } from "react";
+import GlobalContext, {
+  GlobalContextType,
+} from "../shared/contexts/GlobalContext.tsx";
 
 export default function ApplicationLayout() {
   const navigate = useNavigate();
-  const isDark = false;
+  const { isDarkMode } = useContext(GlobalContext) as GlobalContextType;
 
   return (
     <NextUIProvider navigate={navigate}>
       <main
         className={`min-h-screen bg-background text-foreground ${
-          isDark ? "dark" : ""
+          isDarkMode ? "dark" : ""
         }`}
       >
         <div>

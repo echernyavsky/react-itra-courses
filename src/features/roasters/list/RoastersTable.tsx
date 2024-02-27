@@ -1,5 +1,6 @@
 import { Roaster } from "../../../shared/types/roaster.ts";
 import {
+  Link,
   Table,
   TableBody,
   TableCell,
@@ -11,8 +12,11 @@ import {
 } from "@nextui-org/react";
 import { Key, useCallback } from "react";
 import { EyeIcon } from "../../../components/icons/EyeIcon.tsx";
-import { DeleteIcon } from "../../../components/icons/DeleteIcon.tsx";
 import { FormattedMessage } from "react-intl";
+import routes from "../../../shared/constants/routes.ts";
+import DeleteRoasterConfirmation from "./DeleteRoasterConfirmation.tsx";
+import { deleteRoaster } from "../../../shared/apis/roasterApi.ts";
+import { useRevalidator } from "react-router";
 
 interface RoastersTableProps {
   rows: Roaster[];
@@ -38,6 +42,7 @@ const columns = [
 ];
 
 export default function RoastersTable({ rows }: RoastersTableProps) {
+  const revalidator = useRevalidator();
   const renderCell = useCallback((item: Roaster, columnKey: Key) => {
     const cellValue = item[columnKey as keyof Roaster];
 
@@ -54,18 +59,22 @@ export default function RoastersTable({ rows }: RoastersTableProps) {
             <Tooltip
               content={<FormattedMessage id="roasters.table.actions.details" />}
             >
-              <span className="cursor-pointer text-lg text-default-400 active:opacity-50">
+              <Link
+                href={routes.ROASTERS.DETAILS.replace(
+                  ":id",
+                  item.id.toString(),
+                )}
+                className="cursor-pointer text-lg text-default-400 active:opacity-50"
+              >
                 <EyeIcon />
-              </span>
+              </Link>
             </Tooltip>
-            <Tooltip
-              color="danger"
-              content={<FormattedMessage id="roasters.table.actions.delete" />}
-            >
-              <span className="cursor-pointer text-lg text-danger active:opacity-50">
-                <DeleteIcon />
-              </span>
-            </Tooltip>
+            <DeleteRoasterConfirmation
+              onDelete={async () => {
+                await deleteRoaster(item.id);
+                revalidator.revalidate();
+              }}
+            />
           </div>
         );
       default:

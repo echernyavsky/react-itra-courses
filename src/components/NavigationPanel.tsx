@@ -10,6 +10,8 @@ import routes from "../shared/constants/routes.ts";
 import { useCallback } from "react";
 import { useNavigate } from "react-router";
 import { Image } from "@nextui-org/react";
+import LocalePicker from "./LocalePicker.tsx";
+import ThemeSwitcher from "./ThemeSwitcher.tsx";
 
 export default function NavigationPanel() {
   const navigate = useNavigate();
@@ -31,12 +33,15 @@ export default function NavigationPanel() {
         justify="center"
       ></NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <ThemeSwitcher />
+        </NavbarItem>
+        <NavbarItem className="w-96">
+          <LocalePicker />
+        </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Link onClick={() => onLinkClick(routes.LOGIN)}>Login</Link>
         </NavbarItem>
-        {/*<NavbarItem className="w-96">*/}
-        {/*  <LocalePicker />*/}
-        {/*</NavbarItem>*/}
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
             Sign Up

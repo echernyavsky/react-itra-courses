@@ -4,29 +4,36 @@ import { IntlProvider } from "react-intl";
 import locales, {
   localizationDictionaries,
 } from "./shared/localization/locales.ts";
+import { useState } from "react";
+import localStorageKeys from "./shared/constants/localStorageKeys.ts";
+import GlobalContext from "./shared/contexts/GlobalContext.tsx";
 
 function App() {
-  // const [currentLocale, setCurrentLocale] = useState<string>(
-  //   localStorage.getItem(localStorageKeys.LOCALE) || locales.EN,
-  // );
+  const [currentLocale, setCurrentLocale] = useState<string>(
+    localStorage.getItem(localStorageKeys.LOCALE) || locales.EN,
+  );
+
+  const [isDarkMode, setDarkMode] = useState<boolean>(
+    !!localStorage.getItem(localStorageKeys.DARK_MODE) || false,
+  );
 
   return (
     <>
-      {/*
-     <GlobalContext.Provider
-       value={{
-         locale: currentLocale,
-         setLocale: setCurrentLocale,
-       }}
-     >
-    */}
-      <IntlProvider
-        messages={localizationDictionaries[locales.EN]}
-        locale={locales.EN}
+      <GlobalContext.Provider
+        value={{
+          locale: currentLocale,
+          setLocale: setCurrentLocale,
+          isDarkMode: isDarkMode,
+          setDarkMode: setDarkMode,
+        }}
       >
-        <AppRoutes />
-      </IntlProvider>
-      {/* </GlobalContext.Provider> */}
+        <IntlProvider
+          messages={localizationDictionaries[currentLocale]}
+          locale={currentLocale}
+        >
+          <AppRoutes />
+        </IntlProvider>
+      </GlobalContext.Provider>
     </>
   );
 }

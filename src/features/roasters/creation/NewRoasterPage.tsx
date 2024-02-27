@@ -1,13 +1,23 @@
 import { Controller, useForm } from "react-hook-form";
 import { RoasterForm, validationSchema } from "./validationSchema.ts";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Button, Input } from "@nextui-org/react";
+import { Button, Input, Textarea } from "@nextui-org/react";
 import FileUpload from "../../../components/forms/FileUpload.tsx";
 import { createRoaster } from "../../../shared/apis/roasterApi.ts";
 import { useNavigate } from "react-router";
 import routes from "../../../shared/constants/routes.ts";
 import { FormattedMessage } from "react-intl";
 import RoastersBreadcrumbs from "../components/RoastersBreadcrumbs.tsx";
+import {
+  BoldItalicUnderlineToggles,
+  headingsPlugin,
+  listsPlugin,
+  MDXEditor,
+  quotePlugin,
+  toolbarPlugin,
+  UndoRedo,
+} from "@mdxeditor/editor";
+import "@mdxeditor/editor/style.css";
 
 export default function NewRoasterPage() {
   const {
@@ -70,6 +80,39 @@ export default function NewRoasterPage() {
               type="text"
               label={<FormattedMessage id="new-roaster.form.location" />}
               {...register("location")}
+            />
+          </div>
+          <div className="my-2">
+            {/*<Textarea*/}
+            {/*  label="Description"*/}
+            {/*  placeholder="Enter your description"*/}
+            {/*  {...register("description")}*/}
+            {/*/>*/}
+            <Controller
+              control={control}
+              name="description"
+              render={({ field: { onChange, value } }) => {
+                return (
+                  <MDXEditor
+                    onChange={onChange}
+                    markdown={value || ""}
+                    plugins={[
+                      headingsPlugin(),
+                      quotePlugin(),
+                      listsPlugin(),
+                      toolbarPlugin({
+                        toolbarContents: () => (
+                          <>
+                            {" "}
+                            <UndoRedo />
+                            <BoldItalicUnderlineToggles />
+                          </>
+                        ),
+                      }),
+                    ]}
+                  />
+                );
+              }}
             />
           </div>
           <div className="my-2">

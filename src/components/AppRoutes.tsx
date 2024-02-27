@@ -9,6 +9,7 @@ import RoasterDetails from "../features/roasters/details/RoasterDetails.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ApplicationLayout from "./ApplicationLayout.tsx";
 import roastersLoader from "../features/roasters/list/roastersLoader.ts";
+import roasterDetailsLoader from "../features/roasters/details/roasterDetailsLoader.ts";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,7 @@ const router = createBrowserRouter([
           },
           {
             path: routes.ROASTERS.DETAILS,
+            loader: roasterDetailsLoader,
             element: <RoasterDetails />,
           },
         ],
