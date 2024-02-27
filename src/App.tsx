@@ -13,18 +13,12 @@ function App() {
     localStorage.getItem(localStorageKeys.LOCALE) || locales.EN,
   );
 
-  const [isDarkMode, setDarkMode] = useState<boolean>(
-    !!localStorage.getItem(localStorageKeys.DARK_MODE) || false,
-  );
-
   return (
     <>
       <GlobalContext.Provider
         value={{
           locale: currentLocale,
           setLocale: setCurrentLocale,
-          isDarkMode: isDarkMode,
-          setDarkMode: setDarkMode,
         }}
       >
         <IntlProvider

@@ -11,7 +11,6 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router";
 import { Image } from "@nextui-org/react";
 import LocalePicker from "./LocalePicker.tsx";
-import ThemeSwitcher from "./ThemeSwitcher.tsx";
 
 export default function NavigationPanel() {
   const navigate = useNavigate();
@@ -33,9 +32,9 @@ export default function NavigationPanel() {
         justify="center"
       ></NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
-          <ThemeSwitcher />
-        </NavbarItem>
+        {/*<NavbarItem>*/}
+        {/*  <ThemeSwitcher />*/}
+        {/*</NavbarItem>*/}
         <NavbarItem className="w-96">
           <LocalePicker />
         </NavbarItem>
