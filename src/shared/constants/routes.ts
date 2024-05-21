@@ -21,6 +21,11 @@ const routes = {
     NEW: "/roasters/new",
     DETAILS: "/roasters/:id",
   },
+  DRINKS: {
+    ROOT: "/drinks",
+    NEW: "/drinks/new",
+    DETAILS: "/drinks/:id",
+  },
 };
 
 export default routes;

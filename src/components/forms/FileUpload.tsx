@@ -4,7 +4,7 @@ import { FieldError, FieldErrorsImpl, Merge } from "react-hook-form";
 
 interface FileUploadProps {
   name: string;
-  label: JSX.Element;
+  label: JSX.Element | string;
   error: Merge<FieldError, FieldErrorsImpl<object>> | undefined;
   onChange: (...event: unknown[]) => void;
 }

@@ -1,7 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
 import { RoasterForm, validationSchema } from "./validationSchema.ts";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import { Button, Input } from "@nextui-org/react";
 import FileUpload from "../../../components/forms/FileUpload.tsx";
 import { createRoaster } from "../../../shared/apis/roasterApi.ts";
 import { useNavigate } from "react-router";

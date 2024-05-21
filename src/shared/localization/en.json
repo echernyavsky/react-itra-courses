@@ -12,6 +12,8 @@
   "sidebar.breweries": "Breweries",
   "sidebar.beer-collection": "Beer collection",
   "sidebar.roasters": "Roasters",
+  "sidebar.drink": "Drink",
+  "sidebar.movies": "Movies",
   "roasters.table.header.name": "Name",
   "roasters.table.header.year": "Year",
   "roasters.table.header.location": "Location",

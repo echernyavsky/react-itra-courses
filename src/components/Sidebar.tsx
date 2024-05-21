@@ -47,6 +47,9 @@ export default function Sidebar() {
         <ListboxItem key={routes.ROASTERS.ROOT} href={routes.ROASTERS.ROOT}>
           <FormattedMessage id="sidebar.roasters" />
         </ListboxItem>
+        <ListboxItem key={routes.DRINKS.ROOT} href={routes.DRINKS.ROOT}>
+          <FormattedMessage id="sidebar.drink" />
+        </ListboxItem>
       </Listbox>
     </>
   );
