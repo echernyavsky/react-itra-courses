@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 export type GlobalContextType = {
   locale: string;
-  setLocale: (value: string) => void;
+  setLocale: (locale: string) => void;
   isDarkMode: boolean;
   setDarkMode: (value: string) => void;
 };
