@@ -9,7 +9,7 @@ import {
   TableRow,
   Tooltip,
   User,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { Key, useCallback } from "react";
 import { EyeIcon } from "../../../components/icons/EyeIcon.tsx";
 import { FormattedMessage } from "react-intl";

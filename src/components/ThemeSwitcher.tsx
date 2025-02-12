@@ -1,5 +1,5 @@
 import { SVGProps, useContext } from "react";
-import { useSwitch, VisuallyHidden } from "@nextui-org/react";
+import { useSwitch, VisuallyHidden } from "@heroui/react";
 import GlobalContext, {
   GlobalContextType,
 } from "../shared/contexts/GlobalContext.tsx";

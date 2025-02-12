@@ -5,11 +5,11 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import routes from "../shared/constants/routes.ts";
 import { useCallback } from "react";
 import { useNavigate } from "react-router";
-import { Image } from "@nextui-org/react";
+import { Image } from "@heroui/react";
 import LocalePicker from "./LocalePicker.tsx";
 import ThemeSwitcher from "./ThemeSwitcher.tsx";
 

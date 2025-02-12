@@ -1,4 +1,4 @@
-import { Listbox, ListboxItem } from "@nextui-org/react";
+import { Listbox, ListboxItem } from "@heroui/react";
 import ItemCounter from "./ItemCounter.tsx";
 import routes from "../shared/constants/routes.ts";
 import { useEffect, useState } from "react";

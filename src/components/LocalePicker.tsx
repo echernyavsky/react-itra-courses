@@ -1,4 +1,4 @@
-import { Select, SelectItem } from "@nextui-org/react";
+import { Select, SelectItem } from "@heroui/react";
 import locales from "../shared/localization/locales.ts";
 import { useContext } from "react";
 import GlobalContext, {

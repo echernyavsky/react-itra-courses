@@ -1,7 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { DrinkForm, validationSchema } from "./validationSchema.ts";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import { Button, Input, Textarea } from "@heroui/react";
 import FileUpload from "../../../components/forms/FileUpload.tsx";
 import { createDrink } from "../../../shared/apis/drinkApi.ts";
 import { useNavigate } from "react-router";

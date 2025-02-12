@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Image } from "@heroui/react";
 import { useLoaderData } from "react-router";
 import { Drink } from "../../../shared/types/drink.ts";
 

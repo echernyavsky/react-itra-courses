@@ -1,4 +1,4 @@
-import { Button, Input } from "@nextui-org/react";
+import { Button, Input } from "@heroui/react";
 import { useLoaderData, useNavigate } from "react-router";
 import routes from "../../../shared/constants/routes.ts";
 import DrinksTable from "./DrinksTable.tsx";

@@ -10,7 +10,7 @@ import {
   TableRow,
   Tooltip,
   User,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import routes from "../../../shared/constants/routes.ts";
 import { EyeIcon } from "../../../components/icons/EyeIcon.tsx";
 

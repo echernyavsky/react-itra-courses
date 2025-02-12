@@ -1,15 +1,15 @@
 import NavigationPanel from "./NavigationPanel.tsx";
 import Sidebar from "./Sidebar.tsx";
 import Footer from "./Footer.tsx";
-import { Outlet, useNavigate } from "react-router";
-import { NextUIProvider } from "@nextui-org/react";
+import { Outlet, useNavigate, useHref } from "react-router-dom";
+import { HeroUIProvider } from "@heroui/react";
 
 export default function ApplicationLayout() {
   const navigate = useNavigate();
 
   return (
-    <NextUIProvider navigate={navigate}>
-      <main className={`min-h-screen bg-background text-foreground`}>
+    <HeroUIProvider navigate={navigate} useHref={useHref}>
+      <main className={`min-h-screen bg-background pb-[70px] text-foreground`}>
         <div>
           <NavigationPanel />
         </div>
@@ -18,13 +18,13 @@ export default function ApplicationLayout() {
             <div className="md:col-span-1 lg:col-span-1 xl:col-span-1">
               <Sidebar />
             </div>
-            <div className="md:col-span-2 lg:col-span-3 xl:col-span-5">
+            <div className="p-2 md:col-span-2 lg:col-span-3 xl:col-span-5">
               <Outlet />
             </div>
           </div>
         </div>
         <Footer />
       </main>
-    </NextUIProvider>
+    </HeroUIProvider>
   );
 }

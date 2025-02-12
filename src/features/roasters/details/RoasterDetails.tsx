@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Image } from "@heroui/react";
 import routes from "../../../shared/constants/routes.ts";
 import RoastersBreadcrumbs from "../components/RoastersBreadcrumbs.tsx";
 import { useLoaderData } from "react-router";

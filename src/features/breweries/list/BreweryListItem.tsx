@@ -1,4 +1,4 @@
-import { CardBody, CardHeader, Image, Card } from "@nextui-org/react";
+import { CardBody, CardHeader, Image, Card } from "@heroui/react";
 import { BreweryViewModel } from "../../../shared/apis/breweryApi.ts";
 
 interface BreweryListItemProps {

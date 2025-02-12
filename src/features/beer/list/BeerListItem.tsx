@@ -1,4 +1,4 @@
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Image } from "@heroui/react";
 import { useCallback } from "react";
 import { useNavigate } from "react-router";
 import routes from "../../../shared/constants/routes.ts";

@@ -17,6 +17,7 @@ import DrinkDetailsPage from "../features/drinks/details/DrinkDetailsPage.tsx";
 import MoviesListPage from "../features/movies/moviesList/MoviesListPage.tsx";
 import NewMoviePage from "../features/movies/newMovie/NewMoviePage.tsx";
 import drinkDetailsLoader from "../features/drinks/details/drinkDetailsLoader.ts";
+import { moviesListLoader } from "../features/movies/moviesList/moviesListLoader.ts";
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,7 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
+            loader: moviesListLoader,
             element: <MoviesListPage />,
           },
           {

@@ -7,7 +7,7 @@ import {
   ModalHeader,
   Tooltip,
   useDisclosure,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { FormattedMessage } from "react-intl";
 import { DeleteIcon } from "../../../components/icons/DeleteIcon.tsx";
 
