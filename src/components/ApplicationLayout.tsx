@@ -1,27 +1,19 @@
 import NavigationPanel from "./NavigationPanel.tsx";
-import Sidebar from "./Sidebar.tsx";
 import Footer from "./Footer.tsx";
-import { Outlet, useNavigate, useHref } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { HeroUIProvider } from "@heroui/react";
 
 export default function ApplicationLayout() {
   const navigate = useNavigate();
 
   return (
-    <HeroUIProvider navigate={navigate} useHref={useHref}>
+    <HeroUIProvider navigate={navigate}>
       <main className={`min-h-screen bg-background pb-[70px] text-foreground`}>
         <div>
           <NavigationPanel />
         </div>
-        <div className="p-2">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-            <div className="md:col-span-1 lg:col-span-1 xl:col-span-1">
-              <Sidebar />
-            </div>
-            <div className="p-2 md:col-span-2 lg:col-span-3 xl:col-span-5">
-              <Outlet />
-            </div>
-          </div>
+        <div className="mt-20 px-10 py-2">
+          <Outlet />
         </div>
         <Footer />
       </main>

@@ -107,5 +107,5 @@ const router = createBrowserRouter([
 ]);
 
 export default function AppRoutes() {
-  return <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />;
+  return <RouterProvider router={router} />;
 }

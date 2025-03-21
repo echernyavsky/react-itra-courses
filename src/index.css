@@ -2,64 +2,141 @@
 @tailwind components;
 @tailwind utilities;
 
-/*:root {*/
-/*  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
-/*  line-height: 1.5;*/
-/*  font-weight: 400;*/
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 20% 18%;
 
-/*  color-scheme: light dark;*/
-/*  color: rgba(255, 255, 255, 0.87);*/
-/*  background-color: #242424;*/
+    --card: 0 0% 100%;
+    --card-foreground: 222 20% 18%;
 
-/*  font-synthesis: none;*/
-/*  text-rendering: optimizeLegibility;*/
-/*  -webkit-font-smoothing: antialiased;*/
-/*  -moz-osx-font-smoothing: grayscale;*/
-/*  -webkit-text-size-adjust: 100%;*/
-/*}*/
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 20% 18%;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 120 16% 97%;
+    --secondary-foreground: 222 20% 18%;
+
+    --muted: 120 16% 97%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 142 76% 46%;
+    --accent-foreground: 222 20% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 13% 90%;
+    --input: 120 13% 90%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 120 40% 98%;
+    --sidebar-foreground: 140 5% 26%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 120 40% 96%;
+    --sidebar-accent-foreground: 140 6% 10%;
+    --sidebar-border: 120 13% 91%;
+    --sidebar-ring: 142 76% 36%;
+  }
+
+  .dark {
+    --background: 222 20% 18%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 20% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 20% 18%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 222 14% 22%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 222 14% 22%;
+    --muted-foreground: 217 10% 64%;
+
+    --accent: 142 40% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 14% 26%;
+    --input: 222 14% 26%;
+    --ring: 142 76% 46%;
+
+    --sidebar-background: 140 6% 10%;
+    --sidebar-foreground: 120 5% 96%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 140 4% 16%;
+    --sidebar-accent-foreground: 120 5% 96%;
+    --sidebar-border: 140 4% 16%;
+    --sidebar-ring: 142 76% 36%;
+  }
 }
-a:hover {
-  color: #535bf2;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page-transition {
+    @apply transition-opacity duration-300;
+  }
+
+  .movie-card {
+    @apply overflow-hidden transition-all duration-500;
+  }
+
+  .movie-card-image {
+    @apply transition-transform duration-700;
+  }
+
+  .movie-card:hover .movie-card-image {
+    @apply transform scale-105;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/70;
+  }
+
+  /* Glass morphism */
+  .glass {
+    @apply backdrop-blur-md bg-white/80 dark:bg-black/60 border border-white/20 dark:border-white/10;
+  }
 }
+
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-/*@media (prefers-color-scheme: light) {*/
-/*  :root {*/
-/*    color: #213547;*/
-/*    background-color: #ffffff;*/
-/*  }*/
-/*  a:hover {*/
-/*    color: #747bff;*/
-/*  }*/
-/*  button {*/
-/*    background-color: #f9f9f9;*/
-/*  }*/
-/*}*/
