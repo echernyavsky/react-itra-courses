@@ -17,14 +17,14 @@ export const MovieCard: React.FC<MovieCardProps> = ({
 
   return (
     <Link
-      to={`/movie/${movie.id}`}
+      to={`/movies/${movie.id}`}
       className={`movie-card group block transform animate-fade-in rounded-2xl bg-white shadow-sm transition-all duration-500 hover:shadow-lg dark:bg-card ${className || ""}`}
       style={{ animationDelay }}
     >
       <div className="aspect-[2/3] overflow-hidden rounded-2xl">
         <img
-          src={movie.poster}
-          alt={movie.title}
+          src={movie.posterUrl}
+          alt={movie.name}
           className="movie-card-image h-full w-full object-cover"
           loading="lazy"
         />
@@ -34,21 +34,19 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           <span className="rounded-full bg-secondary px-2 py-0.5 text-xs font-medium">
             {movie.year}
           </span>
-          <span className="text-xs text-muted-foreground">
-            {movie.duration}
-          </span>
+          <span className="text-xs text-muted-foreground">60 min</span>
         </div>
         <h3 className="line-clamp-1 text-base font-semibold transition-colors duration-300 group-hover:text-primary">
-          {movie.title}
+          {movie.name}
         </h3>
         <div className="mt-1 flex items-center">
           <div className="flex items-center">
-            <span className="mr-1 text-sm font-medium">{movie.rating}</span>
+            <span className="mr-1 text-sm font-medium">5.0</span>
             <span className="text-amber-400">★</span>
           </div>
           <span className="mx-2 text-muted-foreground">•</span>
           <span className="line-clamp-1 text-xs text-muted-foreground">
-            {movie.genre.join(", ")}
+            {movie.genre}
           </span>
         </div>
       </div>

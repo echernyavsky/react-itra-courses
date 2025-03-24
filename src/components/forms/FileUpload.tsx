@@ -26,17 +26,13 @@ export default function FileUpload({
   };
 
   return (
-    <>
+    <div>
       <div>
         <label className="text-sm font-bold">{label}</label>
       </div>
       <div className="mt-1">
         <input
-          className="block w-full text-sm text-slate-500
-            file:mr-4 file:rounded-md file:border-0 file:bg-pink-50
-            file:px-4 file:py-2 file:text-sm
-            file:font-semibold file:text-pink-700
-            hover:file:bg-pink-100"
+          className="block w-full text-sm text-slate-500 file:mr-4 file:rounded-md file:border-0 file:bg-pink-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-pink-700 hover:file:bg-pink-100"
           type="file"
           name={name}
           onChange={handleFileChange}
@@ -57,6 +53,6 @@ export default function FileUpload({
           <div className="text-tiny text-danger">{error.message}</div>
         </div>
       )}
-    </>
+    </div>
   );
 }
