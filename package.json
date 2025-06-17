@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@heroui/react": "2.6.14",
+    "@heroui/number-input": "^2.0.6",
+    "@heroui/react": "^2.7.5",
+    "@heroui/toast": "^2.0.6",
     "@hookform/resolvers": "^4.1.3",
     "@mdxeditor/editor": "^3.29.0",
     "autoprefixer": "^10.4.20",
