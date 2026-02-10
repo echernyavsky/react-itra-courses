@@ -15,6 +15,9 @@ import DrinkCreationPage from "../features/drinks/creation/DrinkCreationPage.tsx
 import drinksLoader from "../features/drinks/list/drinksLoader.ts";
 import DrinkDetailsPage from "../features/drinks/details/DrinkDetailsPage.tsx";
 import drinkDetailsLoader from "../features/drinks/details/drinkDetailsLoader.ts";
+import FilmCatalogPage from "../features/films/catalog/FilmCatalogPage.tsx";
+import FilmCreationPage from "../features/films/creation/FilmCreationPage.tsx";
+import filmsLoader from "../features/films/catalog/filmsLoader.ts";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +85,20 @@ const router = createBrowserRouter([
             path: routes.DRINKS.DETAILS,
             loader: drinkDetailsLoader,
             element: <DrinkDetailsPage />,
+          },
+        ],
+      },
+      {
+        path: routes.FILMS.ROOT,
+        children: [
+          {
+            index: true,
+            loader: filmsLoader,
+            element: <FilmCatalogPage />,
+          },
+          {
+            path: routes.FILMS.NEW,
+            element: <FilmCreationPage />,
           },
         ],
       },

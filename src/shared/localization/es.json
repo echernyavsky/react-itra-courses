@@ -26,5 +26,6 @@
   "new-roaster.form.location": "Ubicación",
   "new-roaster.form.logo": "Logotipo",
   "new-roaster.form.year": "Año",
-  "new-roaster.form.submit": "Enviar"
+  "new-roaster.form.submit": "Enviar",
+  "films.creation.title": "Crear una nueva película"
 }

@@ -26,5 +26,6 @@
   "new-roaster.form.location": "Lokalizacja",
   "new-roaster.form.logo": "Logo",
   "new-roaster.form.year": "Rok",
-  "new-roaster.form.submit": "Wyślij"
+  "new-roaster.form.submit": "Wyślij",
+  "films.creation.title": "Utwórz nowy film"
 }

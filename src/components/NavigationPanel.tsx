@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiFilm, FiUser, FiLogIn } from "react-icons/fi";
 import routes from "../shared/constants/routes.ts";
+import LocalePicker from "./LocalePicker.tsx";
+import ThemeSwitcher from "./ThemeSwitcher.tsx";
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,12 +18,17 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [{ name: "Home", path: routes.HOME }];
+  const navItems = [
+    { name: "Home", path: routes.HOME },
+    { name: "Films", path: routes.FILMS.ROOT },
+  ];
 
   return (
     <header
       className={`fixed left-0 right-0 top-0 z-50 px-6 transition-all duration-300 md:px-10 ${
-        scrolled ? "bg-white py-3 shadow-md" : "bg-transparent py-5"
+        scrolled
+          ? "bg-white py-3 shadow-md dark:bg-gray-900"
+          : "bg-transparent py-5 dark:bg-gray-900"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
@@ -31,7 +38,9 @@ export const Navbar: React.FC = () => {
           className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80"
         >
           <FiFilm className="h-6 w-6 text-green-600" />
-          <span className="text-xl font-semibold text-gray-900">Cinematic</span>
+          <span className="text-xl font-semibold text-gray-900 dark:text-white">
+            Cinematic
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -53,6 +62,9 @@ export const Navbar: React.FC = () => {
             </Link>
           ))}
         </nav>
+
+        <LocalePicker />
+        <ThemeSwitcher />
 
         {/* Right Section */}
         <div className="flex items-center gap-3">

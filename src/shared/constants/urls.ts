@@ -9,6 +9,7 @@ const urls = {
   ROASTERS: `${BASE_API_URL}/roasters`,
   UPLOAD: `${BASE_API_URL}/upload`,
   DRINKS: `${BASE_API_URL}/drinks`,
+  FILMS: `${BASE_API_URL}/films`,
 };
 
 export default urls;

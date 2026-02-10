@@ -27,5 +27,6 @@
   "new-roaster.form.location": "Местоположение",
   "new-roaster.form.logo": "Логотип",
   "new-roaster.form.year": "Год",
-  "new-roaster.form.submit": "Отправить"
+  "new-roaster.form.submit": "Отправить",
+  "films.creation.title": "Создать новый фильм"
 }
